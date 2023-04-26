@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		iconLoad.classList.add('_sending');
 		let response = await fetch('sendmail.php', {
-			method: 'post',
+			method: 'POST',
 			body: formData
 		});
 		if (response.ok) {
