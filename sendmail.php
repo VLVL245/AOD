@@ -1,5 +1,5 @@
 <?php
-	use PHPMailer\PHPMailer\PHPmailer;
+	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
 
 	require 'phpmailer/src/Exception.php';
