@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let formData = new FormData(form);
 
 		iconLoad.classList.add('_sending');
-		let response = await fetch('sendmail.php', {
+		let response = await fetch('https://vlvl245.github.io/AOD/sendmail.php', {
 			method: 'POST',
 			body: formData,
 			headers: {
