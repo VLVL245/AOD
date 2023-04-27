@@ -137,7 +137,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		iconLoad.classList.add('_sending');
 		let response = await fetch('../sendmail.php', {
 			method: 'POST',
-			body: formData
+			body: formData,
+			headers: {
+                           "Content-Type": "application/json"
+                        },
 		});
 		if (response.ok) {
 			let result = await response.json();
