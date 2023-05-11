@@ -122,36 +122,4 @@ function validateEmail(email) {
 
 // Валидация ввода email =====================================================================================
 
-// Отправка формы на email===========================================================
 
-document.addEventListener('DOMContentLoaded', function () {
-	const form = document.getElementById('form');
-	let iconLoad = document.querySelector('.subscribe');
-	form.addEventListener('submit', formSend);
-
-	async function formSend(e) {
-		e.preventDefault();
-
-		let formData = new FormData(form);
-
-		iconLoad.classList.add('_sending');
-		let response = await fetch('sendmail.php', {
-			method: 'POST',
-			body: formData,
-			headers: {
-                           "Content-Type": "application/json"
-                        },
-		});
-		if (response.ok) {
-			let result = await response.json();
-			alert(result.message);
-			form.reset();
-			iconLoad.classList.remove('_sending');
-		} else {
-			alert("Ошибка");
-			iconLoad.classList.remove('_sending');
-
-		}
-
-	}
-});
